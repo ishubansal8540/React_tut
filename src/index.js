@@ -3,12 +3,47 @@ import ReactDom from 'react-dom';
 
 
  
-function Greeting()
+function Booklist()
 {
-  return <>hello world</>;   
+  return (
+  <section>
+  <Book/>
+  <Book/>
+  <Book/>
+  <Book/>
+  </section>
+  );   
 }
 
-ReactDom.render(<Greeting/>,document.getElementById('root'));
+const Book = ()=>  {
+  return (
+<article>
+   <Image/>
+   <Title/>
+   <Author/>
+</article>
+);};
+const Image = ()=> (
+<img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY218_.jpg" alt="" />
+);
+
+const  Title= ()=>  
+ (
+<h1>
+Ikigai: The Japanese secret to a long and happy life
+</h1>
+  );
+
+  const Author = () => (
+
+    <h4>
+      Héctor García and Francesc Miralles 
+    </h4>
+  );
+
+
+
+ReactDom.render(<Booklist/>,document.getElementById('root'));
 
 
 
