@@ -36,7 +36,7 @@ Ikigai: The Japanese secret to a long and happy life
 
   const Author = () => (
 
-    <h4>
+    <h4 style = {{color : "617d98" , fontSize: '0.75rem',marginTop : '0.25rem '}}>
       Héctor García and Francesc Miralles 
     </h4>
   );
