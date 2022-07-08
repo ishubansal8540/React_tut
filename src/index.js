@@ -14,34 +14,22 @@ function Booklist()
   </section>
   );   
 }
-
+const author = 'Héctor García and Francesc Miralles '
 const Book = ()=>  {
+const Title = "Ikigai: The Japanese secret to a long and happy life"
+
   return (
 <article className="book">
-   <Image/>
-   <Title/>
-   <Author/>
+
+   <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY218_.jpg" alt="" />
+   <h1>
+   {Title}
+</h1>
+   <h4>
+   {author}
+    </h4>
 </article>
 );};
-const Image = ()=> (
-<img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY218_.jpg" alt="" />
-);
-
-const  Title= ()=>  
- (
-<h1>
-Ikigai: The Japanese secret to a long and happy life
-</h1>
-  );
-
-  const Author = () => (
-
-    <h4 style = {{color : "617d98" , fontSize: '0.75rem',marginTop : '0.25rem '}}>
-      Héctor García and Francesc Miralles 
-    </h4>
-  );
-
-
 
 ReactDom.render(<Booklist/>,document.getElementById('root'));
 
