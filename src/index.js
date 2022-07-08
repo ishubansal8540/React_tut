@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-
+import './index.css'
  
 function Booklist()
 {
   return (
-  <section>
+  <section className = "booklist">
   <Book/>
   <Book/>
   <Book/>
@@ -17,7 +17,7 @@ function Booklist()
 
 const Book = ()=>  {
   return (
-<article>
+<article className="book">
    <Image/>
    <Title/>
    <Author/>
