@@ -45,19 +45,18 @@ function Booklist()
   );   
 }
 
-const Book = (props)=>  {
-
+const Book = ({img,Title,author})=>  {
+//  const {img,Title,author} = props;
 
   return (
 <article className="book">
- <img src={props.img} alt="" />
+ <img src={img} alt="" />
   <h1>
-   {props.Title} 
+   {Title} 
   </h1>
   <h4>
-  {props.author}
+  {author}
   </h4>
-<h1>{props.job}</h1>
 
 </article>
 );};
