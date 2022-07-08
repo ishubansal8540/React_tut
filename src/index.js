@@ -3,31 +3,62 @@ import ReactDom from 'react-dom';
 
 import './index.css'
  
+
+const firstBook = {
+   
+     img : 'https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY218_.jpg',
+Title: "Ikigai: The Japanese secret to a long and happy life",
+ author: 'Héctor García and Francesc Miralles '
+}
+const secondBook = {
+   
+     img : 'https://images-eu.ssl-images-amazon.com/images/I/91bYsX41DVL._AC_UL232_SR232,232_.jpg',
+Title: "Atomic Habits: The life-changing",
+ author: 'James Clear'
+}
+const thirdBook = {
+   
+     img : 'https://m.media-amazon.com/images/I/41r6F2LRf8L._BG0,0,0,0_FMpng_AC_SY320_SX320_.jpg',
+Title: "The Psychology of Money",
+ author: ' Morgan Housel'
+}
+
+
+
 function Booklist()
 {
   return (
   <section className = "booklist">
-  <Book/>
-  <Book/>
-  <Book/>
-  <Book/>
+  <Book img ={firstBook.img}
+   Title = {firstBook.Title} 
+   author = {firstBook.author}
+   />
+  <Book img ={secondBook.img}
+   Title = {secondBook.Title}
+    author = {secondBook.author}
+    />
+  <Book img ={thirdBook.img} 
+  Title = {thirdBook.Title} 
+  author = {thirdBook.author}
+  />
   </section>
   );   
 }
-const author = 'Héctor García and Francesc Miralles '
-const Book = ()=>  {
-const Title = "Ikigai: The Japanese secret to a long and happy life"
+
+const Book = (props)=>  {
+
 
   return (
 <article className="book">
+ <img src={props.img} alt="" />
+  <h1>
+   {props.Title} 
+  </h1>
+  <h4>
+  {props.author}
+  </h4>
+<h1>{props.job}</h1>
 
-   <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY218_.jpg" alt="" />
-   <h1>
-   {Title}
-</h1>
-   <h4>
-   {author}
-    </h4>
 </article>
 );};
 
